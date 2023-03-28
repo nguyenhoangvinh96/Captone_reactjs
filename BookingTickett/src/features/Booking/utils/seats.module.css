@@ -1,0 +1,19 @@
+.trapezoid {
+    border-bottom: 26px solid rgba(171, 171, 171, 0.3);
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    height: 0;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+   
+}
+
+.screen {
+    height: 10px;
+    background-color: black;
+    width: 80%;
+    margin: 0 auto;
+    border-radius: 6px;
+  
+}

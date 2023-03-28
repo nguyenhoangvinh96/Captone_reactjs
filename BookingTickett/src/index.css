@@ -1,0 +1,545 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+button:disabled {
+  opacity: 0.4;
+  cursor: no-drop;
+}
+
+input:disabled {
+  opacity: 0.5;
+  cursor: no-drop;
+}
+
+:where(.css-dev-only-do-not-override-1km3mtt).ant-pagination .ant-pagination-item-active:hover {
+  border-color: black;
+  color: black !important;
+}
+
+:where(.css-dev-only-do-not-override-1km3mtt).ant-pagination .ant-pagination-item-active:hover a {
+  color: black;
+}
+
+.ant-carousel .slick-dots li button {
+  width: 14px;
+  height: 14px;
+  color: rgb(17 24 39 / var(--tw-text-opacity));
+  border-radius: 50%;
+}
+
+.ant-carousel .slick-dots-bottom li {
+  margin: initial 6px;
+  padding-bottom: 20px;
+}
+
+.ant-carousel .slick-dots li.slick-active {
+  width: initial;
+}
+
+.setWidthTabs {
+  width: 400px;
+  text-align: left;
+}
+
+.myTab .ant-tabs .ant-tabs-ink-bar {
+  background-color: unset !important;
+}
+
+
+
+
+.backToTop {
+  position: fixed;
+  bottom: 50px;
+  right: 20px;
+  z-index: 999;
+  padding: 8px;
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50px;
+  /* bình thường sẽ ẩn, và có độ mờ là 0*/
+  visibility: hidden;
+  opacity: 0;
+  transition: .5s;
+  border: 1px solid white;
+}
+
+.backToTop:hover {
+  background-color: #a43c24;
+}
+
+.backToTop.active {
+  /* khi active nó sẽ hiện và có opacity ( độ mờ là 1) nó sẽ hiện ra chậm do có transition ở trên 0.5s  */
+  visibility: visible;
+  opacity: 1;
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  margin: 20px auto;
+}
+
+.mask,
+.fill {
+  position: absolute;
+  border-radius: 50%;
+  clip: rect(0, 100px, 100px, 50px);
+}
+
+.fill {
+  clip: rect(0, 50px, 100px, 0);
+  background-color: #29d;
+}
+
+.mask.full,
+.mask.half {
+  clip: rect(0, 100px, 100px, 0);
+}
+
+.mask.full {
+  border: 10px solid #e1e1e1;
+}
+
+.mask.half {
+  border: 10px solid #29d;
+  z-index: 1;
+}
+
+.fill.fix {
+  position: absolute;
+  background-color: #e1e1e1;
+  clip: rect(0, 100px, 100px, 50px);
+  z-index: 2;
+}
+
+.shadow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  box-shadow: 0 0 0 10px #e1e1e1;
+}
+
+.ant-tabs .ant-tabs-ink-bar {
+  background-color: white;
+}
+
+.ant-tabs .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+  color: white;
+}
+
+.ant-tabs .ant-tabs-tab:hover {
+  color: white;
+}
+
+.ant-tabs-left>.ant-tabs-content-holder>.ant-tabs-content>.ant-tabs-tabpane,
+.ant-tabs-left>div>.ant-tabs-content-holder>.ant-tabs-content>.ant-tabs-tabpane {
+  padding-left: 0;
+}
+
+.circleRate {
+  width: 100px;
+  height: 100px;
+  background-color: transparent;
+  border: 8px solid greenyellow;
+  text-align: center;
+  line-height: 80px;
+  border-radius: 100%;
+  font-size: 45px;
+  font-weight: bold;
+  color: white;
+}
+
+.tagDetailHot {
+  display: inline-block;
+  background-color: #ff5733;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.tagDetailDangChieu {
+  display: inline-block;
+  background-color: green;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.tagDetailSapChieu {
+  display: inline-block;
+  background-color: rgb(6, 128, 198);
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+
+.detailTabs {
+  padding-bottom: 20px;
+  transition: .5s;
+}
+
+.normalSeat {
+  width: 35px;
+  height: 28px;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: rgb(62, 81, 93);
+  color: black;
+  border: none;
+  margin: 4px;
+  border: 1px solid rgb(171, 171, 171);
+}
+
+.X-icon-button {
+  width: 33px;
+  height: 26px;
+}
+
+.VipSeat {
+  background-color: rgb(247, 181, 0);
+
+}
+
+.reservedSeat {
+  background-color: rgb(0, 145, 255) !important;
+  color: white;
+  cursor: no-drop;
+}
+
+
+.currentChooseSeat {
+  background-color: rgb(0, 191, 0) !important;
+}
+
+.myReservedSeat {
+  background-color: rgb(255, 94, 0) !important;
+  border: 1px solid rgb(185, 185, 0);
+  box-shadow: 2px 1px 36px -1px rgba(255, 123, 0, 0.75);
+  -webkit-box-shadow: 2px 1px 36px -1px rgba(255, 123, 0, 0.75);
+  -moz-box-shadow: 2px 1px 36px -1px rgba(255, 123, 0, 0.75);
+  color: white;
+}
+
+:where(.css-dev-only-do-not-override-1km3mtt).ant-select:not(.ant-select-disabled):not(.ant-select-customize-input):not(.ant-pagination-size-changer):hover .ant-select-selector {
+  border-color: orange !important;
+}
+
+.ant-select-focused:where(.css-dev-only-do-not-override-1km3mtt).ant-select:not(.ant-select-disabled):not(.ant-select-customize-input):not(.ant-pagination-size-changer) .ant-select-selector {
+  border-color: rgb(255, 153, 0) !important;
+}
+
+:where(.css-dev-only-do-not-override-1km3mtt).ant-btn-default:not(:disabled):hover {
+  color: rgb(255, 94, 0) !important;
+  border-color: rgb(255, 94, 0) !important;
+}
+
+.carouselIntroduce :where(.css-dev-only-do-not-override-1km3mtt).ant-carousel-vertical .slick-dots-right {
+  inset-inline-end: -17px;
+}
+
+.carouselIntroduce .ant-carousel .slick-dots li.slick-active {
+  width: 14px;
+  height: 14px;
+
+}
+
+.carouselIntroduce :where(.css-dev-only-do-not-override-1km3mtt).ant-carousel-vertical .slick-dots li.slick-active button {
+  width: 14px;
+  height: 14px;
+}
+
+:where(.css-dev-only-do-not-override-1km3mtt).ant-tour .ant-tour-inner .ant-tour-footer .ant-tour-indicators .ant-tour-indicator-active {
+  background-color: #ff8600;
+}
+
+
+
+:where(.css-dev-only-do-not-override-1km3mtt).ant-btn-primary {
+  background-color: #ff8600;
+}
+
+:where(.css-dev-only-do-not-override-1km3mtt).ant-btn-primary:not(:disabled):hover {
+  background-color: rgb(255, 94, 0);
+}
+
+:where(.css-dev-only-do-not-override-1km3mtt).ant-carousel .slick-dots li.slick-active button {
+  background-color: rgb(255, 94, 0);
+}
+
+.btnOpenModalVideo {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  width: 45px;
+  height: 45px;
+  line-height: 30px;
+  font-size: 15px;
+  border-radius: 50%;
+  color: white;
+  text-align: center;
+  transform: translateX(-50%);
+  background-color: white;
+  animation: ripple 1s linear infinite;
+  transition: .5s;
+}
+
+.tabHomeNews .ant-tabs .ant-tabs-ink-bar {
+  background-color: transparent;
+}
+
+.dark :where(.css-dev-only-do-not-override-1km3mtt).ant-card {
+  background-color: #393E46;
+  color: white !important;
+}
+
+.dark :where(.css-dev-only-do-not-override-1km3mtt).ant-card-bordered {
+  border: none;
+}
+
+.dark .ant-card-meta-detail .ant-card-meta-title {
+  color: white !important;
+}
+
+.dark .ant-card-meta-detail .ant-card-meta-description {
+  color: gainsboro !important;
+}
+
+:where(.css-dev-only-do-not-override-1km3mtt).ant-pagination .ant-pagination-item-active a {
+  color: white !important;
+}
+
+.dark :where(.css-dev-only-do-not-override-1km3mtt).ant-pagination .ant-pagination-item a {
+  color: white;
+}
+
+.dark :where(.css-dev-only-do-not-override-1km3mtt).ant-tabs .ant-tabs-tab-btn {
+  color: white;
+}
+
+.dark :where(.css-dev-only-do-not-override-1km3mtt).ant-pagination .ant-pagination-item-active {
+  background-color: #393E46;
+  border-color: #ff5733;
+  color: white !important;
+}
+
+.dark :where(.css-dev-only-do-not-override-1km3mtt).ant-select:not(.ant-select-customize-input) .ant-select-selector {
+  background-color: #393E46;
+  color: white;
+}
+
+.dark :where(.css-dev-only-do-not-override-1km3mtt).ant-select .ant-select-arrow {
+  color: white;
+}
+
+.dark :where(.css-dev-only-do-not-override-1km3mtt).ant-table-wrapper .ant-table {
+  background-color: #393E46;
+  color: white;
+}
+
+.dark :where(.css-dev-only-do-not-override-1km3mtt).ant-table-wrapper td.ant-table-column-sort {
+  background-color: #ff5833a6;
+}
+
+.dark :where(.css-dev-only-do-not-override-1km3mtt).ant-table-wrapper .ant-table-tbody>tr.ant-table-row:hover>td,
+.dark :where(.css-dev-only-do-not-override-1km3mtt).ant-table-wrapper .ant-table-tbody>tr>td.ant-table-cell-row-hover {
+  background: #505050;
+}
+
+:where(.css-dev-only-do-not-override-1km3mtt).ant-table-wrapper .ant-table-column-sorter-up.active,
+:where(.css-dev-only-do-not-override-1km3mtt).ant-table-wrapper .ant-table-column-sorter-down.active {
+  color: white;
+}
+
+.dark :where(.css-dev-only-do-not-override-1km3mtt).ant-tabs-card>.ant-tabs-nav .ant-tabs-tab-active,
+.dark :where(.css-dev-only-do-not-override-1km3mtt).ant-tabs-card>div>.ant-tabs-nav .ant-tabs-tab-active {
+  background-color: #222831;
+}
+
+:where(.css-dev-only-do-not-override-1km3mtt).ant-tabs .ant-tabs-tab-btn:focus:not(:focus-visible),
+:where(.css-dev-only-do-not-override-1km3mtt).ant-tabs .ant-tabs-tab-remove:focus:not(:focus-visible),
+:where(.css-dev-only-do-not-override-1km3mtt).ant-tabs .ant-tabs-tab-btn:active,
+:where(.css-dev-only-do-not-override-1km3mtt).ant-tabs .ant-tabs-tab-remove:active {
+  color: white;
+}
+
+.dark :where(.css-dev-only-do-not-override-1km3mtt).ant-table-wrapper .ant-table-thead>tr>th,
+.dark :where(.css-dev-only-do-not-override-1km3mtt).ant-table-wrapper .ant-table-thead>tr>td {
+  background-color: #ababab;
+}
+
+.dark :where(.css-dev-only-do-not-override-1km3mtt).ant-pagination .ant-pagination-item-active a {
+  color: white !important;
+}
+
+.dark :where(.css-dev-only-do-not-override-1km3mtt).ant-pagination .ant-pagination-prev button,
+.dark :where(.css-dev-only-do-not-override-1km3mtt).ant-pagination .ant-pagination-next button {
+  color: white;
+}
+
+.anticon {
+  vertical-align: 1px;
+}
+
+.tabHomeNews .ant-tabs .ant-tabs-tab .ant-tabs-tab-btn:hover {
+  transform: scale(1.05);
+}
+
+:where(.css-dev-only-do-not-override-1km3mtt).ant-tour {
+  max-width: 350px;
+}
+
+:where(.css-dev-only-do-not-override-1km3mtt).ant-pagination .ant-pagination-item-active {
+  border-color: white !important;
+}
+
+.btnOpenModalVideo {
+  opacity: 0.8;
+}
+
+.btnOpenModalVideo:hover {
+  background-color: white;
+  color: white;
+  opacity: 1
+}
+
+.dark .btnOpenModalVideo {
+  background-color: #393E46;
+  border: 1px solid white;
+  opacity: 0.75;
+}
+
+.dark .btnOpenModalVideo:hover {
+  color: #393E46;
+  background-color: white;
+  border: 1px solid white;
+  opacity: 1
+}
+
+/* admin */
+:where(.css-dev-only-do-not-override-1km3mtt).ant-menu-dark {
+  background-color: white;
+  color: black;
+
+}
+
+.dark :where(.css-dev-only-do-not-override-1km3mtt).ant-menu-dark {
+  background-color: #393E46;
+  color: white;
+}
+
+:where(.css-dev-only-do-not-override-1km3mtt).ant-menu-dark .ant-menu-item-selected {
+  background-color: #ff8600;
+}
+
+:where(.css-dev-only-do-not-override-1km3mtt).ant-menu-dark .ant-menu-item:hover:not(.ant-menu-item-selected):not(.ant-menu-submenu-selected),
+:where(.css-dev-only-do-not-override-1km3mtt).ant-menu-dark .ant-menu-submenu-title:hover:not(.ant-menu-item-selected):not(.ant-menu-submenu-selected) {
+  background-color: #ff8600;
+}
+
+:where(.css-dev-only-do-not-override-1km3mtt).ant-input-search .ant-input:hover,
+:where(.css-dev-only-do-not-override-1km3mtt).ant-input-search .ant-input:focus {
+  border-color: #ff8600;
+}
+
+:where(.css-dev-only-do-not-override-1km3mtt).ant-input-affix-wrapper:focus,
+:where(.css-dev-only-do-not-override-1km3mtt).ant-input-affix-wrapper-focused,
+:where(.css-dev-only-do-not-override-1km3mtt).ant-input-affix-wrapper:not(.ant-input-affix-wrapper-disabled):hover {
+  border-color: #ff8600;
+}
+
+:where(.css-dev-only-do-not-override-1km3mtt).ant-switch {
+  background-color: #393E46;
+}
+
+:where(.css-dev-only-do-not-override-1km3mtt).ant-switch.ant-switch-checked,
+:where(.css-dev-only-do-not-override-1km3mtt).ant-switch.ant-switch-checked {
+  background-color: #ff8600;
+}
+:where(.css-dev-only-do-not-override-1km3mtt).ant-switch.ant-switch-checked{
+  background: #ff8600;
+}
+:where(.css-dev-only-do-not-override-1km3mtt).ant-switch.ant-switch-checked:hover:not(.ant-switch-disabled){
+  background: #ff8600;
+}
+@media screen and (max-width:750px) {
+  .normalSeat {
+    width: 29px;
+    height: 24px;
+    font-size: 12px;
+    margin: 2px;
+  }
+
+  .X-icon-button {
+    width: 26px;
+    height: 21px;
+  }
+}
+
+@media screen and (max-width:560px) {
+  .normalSeat {
+    width: 25px;
+    height: 21px;
+    font-size: 10px;
+    margin: 1px;
+  }
+
+  .X-icon-button {
+    width: 22px;
+    height: 19px;
+  }
+}
+
+@media screen and (max-width:465px) {
+  .normalSeat {
+    width: 21px;
+    height: 21px;
+    font-size: 8px;
+    margin: 1px;
+  }
+
+  .X-icon-button {
+    width: 19px;
+    height: 16px;
+  }
+}
+
+/* ripple: gợn sóng */
+@keyframes ripple {
+  0% {
+    box-shadow: 0 0 0 0 rgba(184, 83, 11, 0.25), 0 0 0 10px rgba(162, 86, 15, 0.4), 0 0 0 20px rgba(162, 84, 15, 0.4);
+  }
+
+  100% {
+    box-shadow: 0 0 0 10px rgba(162, 81, 15, 0.3), 0 0 0 20px rgba(162, 71, 15, 0.4), 0 0 0 40px rgba(245, 128, 50, 0);
+  }
+}

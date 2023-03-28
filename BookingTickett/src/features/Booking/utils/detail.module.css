@@ -1,0 +1,31 @@
+.glass-container {
+    position: relative;
+    min-height: 450px;
+    background-size: cover;
+    background-position: center;
+    z-index: 10;
+}
+
+.glass {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(20px);
+    z-index: 1;
+}
+
+.content {
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+}
+
+@media screen and (max-width:780px) {
+    .glass-container {
+        min-height:550px;
+      
+    }
+}
